@@ -17,6 +17,24 @@ meaningful way. You will learn deeply marketable skills.
 * We will do up to 9 projects both inside an OS itself and in userland
 programs.
 
+## Learning Outcomes
+
+There are too many learning outcomes in this course to name them all.
+You can see this in the projects [table](#projects) under the column
+*OSTEP* and *S&R*.
+
+These four learning outcomes are highlighted:
+
+1. At the end of this course, students will be able to design and
+implement complex multi-process and threaded applications.
+
+2. At the end of this course, students will be able to design and
+implement  various synchronization schemes using mutexes, condition
+variables and semaphores.
+
+3. At the end of this course, students will have mastered user level
+memory allocation schemes including free space management.
+
 ## Textbooks
 
 | Title | Source | Cost | Required? |
@@ -84,14 +102,15 @@ helpful.
 * Your partner will be **assigned** to you by me.
 
 * Members of the team must be specified by the partner handing in the
-project.
+project within the code they are handing in.
 
 * The partner not handing in the project must submit a text file stating
 who their partner is.
 
 * Both partners receive the same grade.
 
-* Any partnership problems must be worked out by you.
+* Any partnership problems should be worked out by you but I can step in
+if necessary.
 
 ### Project Requirements
 
@@ -105,7 +124,27 @@ result in a 10 percent penalty.
 * Commenting is required. Failure to adequately comment is a mandatory 5
 percent penalty.
 
+### Extensions
+
+There will be none. The due date is the due date.
+
 ### Warmup Projects
 
 Follow the specification, take a picture of the screen and turn in the
 picture.
+
+## Office Hours
+
+I will have five hours per week available for individual help.
+
+* Monday 11 AM to Noon.
+
+* Tuesday 11 AM to Noon.
+
+* Wednesday 2 PM to 3 PM.
+
+* Thursday nights from 7 to 9 PM (two hours) during the weekly BBQ.
+
+All of these will be conducted via Zoom.
+
+There will be no other hours offered.
