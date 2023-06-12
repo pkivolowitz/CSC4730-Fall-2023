@@ -1,5 +1,46 @@
-<<<<<<< HEAD
 # CSC4730-Fall-2023
+
+## Course Summary
+
+In this course you will not only open the curtain to see the wizard, you
+will strip the wizard revealing their deepest secrets.
+
+The biggest parts of this course:
+
+* We will cover nearly all of the great free textbook: OSTEP - Operating
+Systems in Three Easy Pieces. This book is written at a popular level
+and is very accessible.
+
+* We will leverage the Unix programming environment in a deep and
+meaningful way. You will learn very marketable skills.
+
+* We will do up to 8 projects both inside an OS itself and in userland
+programs.
+
+## Learning Outcomes
+
+There are too many learning outcomes in this course to name them all.
+You can see this in the projects [table](#projects) under the column
+*OSTEP* and *S&R*.
+
+These four learning outcomes are highlighted:
+
+1. At the end of this course, students will be able to design and
+implement complex multi-process and threaded applications.
+
+2. At the end of this course, students will be able to design and
+implement various synchronization schemes using mutexes, condition
+variables and semaphores.
+
+3. At the end of this course, students will have mastered user level
+memory allocation schemes including free space management.
+
+4. At the end of this course, students have designed and synthesized
+complex data structures and algorithms demonstrating mastery of the
+structure of at least one kind of file system.
+
+Implicit in this course is learning the lessons of care, testing,
+debugging and commenting.
 
 ## Meetings
 
@@ -28,7 +69,9 @@ free.
 Ancillary:
 
 1. Required: Advanced Programming in the UNIX environment, third
-   edition. Will be called Stevens and Rago.
+   edition. I will refer to this as Stevens and Rago. If you have any
+   questions about the Unix / Linux environment and APIs, consult this
+   book before approaching me.
 
 2. [xv6
    risc-v](<https://pdos.csail.mit.edu/6.S081/2020/xv6/book-riscv-rev1.pdf>)
@@ -45,6 +88,9 @@ unassigned, you will **not** be told when to do them. Instead, review
 the table of contents in each of the two ancillary sources to get a
 general idea of that they contain. Then, later in the course, when you
 have a question, review the ancillary texts for details.
+
+You expected to have consulted the texts before approaching me with
+questions.
 
 ### Topics covered
 
@@ -68,7 +114,6 @@ The following are the topics which we can expect to be covered:
 | 19 | Translation Lookaside Buffers |
 | 20 | Advanced Page Table |
 
-
 ### man pages
 
 Since early days, Unix has had the `man` command. For example:
@@ -79,12 +124,7 @@ or
 
 `man 2 chdir`
 
-## Late work
-
-Late work (factoring in one free grace day) will not be accepted. To
-state this differently, if an assignment is due on day *n*, you have
-until the end of day *n + 1* to turn it in. After that, it will not
-be accepted.
+Consult the man pages before approaching me with questions.
 
 ## Attendance
 
@@ -108,99 +148,18 @@ minutes after the official start of class.
 
 No, your coach cannot force you to leave class early to make practice.
 
-## Essays
+## Essay
 
-[Here](./therac.md) is a link to one essay assignment. You can look at
-it at your convenience but do it only when assigned.
+[Here](./therac.md) is a link to an essay assignment. You can look at
+it at your convenience but do it only when assigned. The essay is six
+percent of your grade and, at 500 words, is one third to one sixth the
+length of a typical college essay.
 
 ## Projects
 
 Below is a listing of 10 projects of which only 8 are truly projects.
 One is a tutorial and another is just to provide proof you're ready to
-tackle two other projects.
-
-| Ordinal | Project | Space | Notes |
-| ------- | ------- | ----- | ----- |
-| - | `getopt` | User | WSL or terminal |
-| 1 | Shell | User | WSL or terminal |
-| - | Working xv6 | N/A | N/A |
-| 2 | Add System Call | Kernel | xv6-riscv |
-| 3 | Add Guard Page | Kernel | xv6-riscv |
-| 4 | Stride Scheduler | User | WSL or terminal |
-| 5 | MLFQ Scheduler | User | WSL or terminal |
-| 6 | Semaphores | User | WSL or terminal |
-| 7 | Named Pipe | User | WSL or terminal |
-| 8 | File System | User | WSL of terminal |
-=======
-# Syllabus CSC4730-Fall-2023
-
-## Course Summary
-
-In this course you will not only open the curtain to see the wizard, you
-will strip the clothes off the wizard revealing their deepest secrets.
-
-The biggest parts of this course:
-
-* We will cover nearly all of the great free textbook: OSTEP - Operating
-Systems in Three Easy Pieces. This book is written at a popular level
-and is very accessible.
-
-* We will leverage the Unix programming environment in a deep and
-meaningful way. You will learn deeply marketable skills.
-
-* We will do up to 9 projects both inside an OS itself and in userland
-programs.
-
-## Learning Outcomes
-
-There are too many learning outcomes in this course to name them all.
-You can see this in the projects [table](#projects) under the column
-*OSTEP* and *S&R*.
-
-These four learning outcomes are highlighted:
-
-1. At the end of this course, students will be able to design and
-implement complex multi-process and threaded applications.
-
-2. At the end of this course, students will be able to design and
-implement  various synchronization schemes using mutexes, condition
-variables and semaphores.
-
-3. At the end of this course, students will have mastered user level
-memory allocation schemes including free space management.
-
-## Textbooks
-
-| Title | Source | Cost | Required? |
-| ----- | ------ | ---- | --------- |
-| OSTEP | [LINK](<https://pages.cs.wisc.edu/~remzi/OSTEP/>) | Free | Yes |
-| Advanced Programming in the UNIX Environment | Bookstore | ~$60 | Yes |
-| XV6 Book | [LINK](https://pdos.csail.mit.edu/6.S081/2020/xv6/book-riscv-rev1.pdf) | Free | Strongly Advised |
-
-## Grading Criteria
-
-| Gradable Component | Weight  | Notes   |
-| ------------------ | ------: | -----   |
-| Projects           | 92%     |         |
-| Attendance         | 6%      |         |
-| `getopt`           | 1%      | warm up |
-| `working xv6`      | 1%      | warm up |
-
-## Attendance
-
-Absences for any reason count.
-
-| Number | Penalty |
-| ------ | ------- |
-| 0 - 4  | 0% |
-| 5 - 6  | 2% |
-| 7 - 8  | 4% |
-| 9+     | 6% |
-
-Should a long term absence due to uncontrollable circumstances become
-necessary, please speak to me.
-
-## Projects
+tackle the two kernel projects.
 
 The *Weight* column provides a weighting of the project within the
 Project Grading Component. It suggests my anticipation of the relative
@@ -212,7 +171,6 @@ material. The indicated chapters will be most helpful.
 The *S&R* column indicates which chapters of Stevens and Rago can be
 helpful.
 
-
 | # | Project       | Space  | Weight  | OSTEP      | S&R |
 | - | -------       | -----  | ------: | -----      | --- |
 | - | `getopt`      | User   | N/A     | N/A        | N/A |
@@ -221,11 +179,10 @@ helpful.
 | 2 | System Call   | Kernel |  60     | 6          | N/A |
 | 3 | Stride / MLFQ | User   |  70     | 7, 8, 9    | N/A |
 | 4 | Guard Page    | Kernel |  60     | 13         | N/A |
-| 5 | Move Stack    | Kernel |  90     | 14, 15, 16 | N/A |
-| 6 | Free Space    | User   |  70     | 17         | 7   |
-| 7 | Semaphores    | User   |  70     | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
-| 8 | Named Pipe    | User   |  90     | 14, 17, 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
-| 9 | FSCK          | User   |  100    | 39, 40, 42 | 3, 4, 5 |
+| 5 | Free Space    | User   |  70     | 17         | 7   |
+| 6 | Semaphores    | User   |  70     | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
+| 7 | Named Pipe    | User   |  90     | 14, 17, 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
+| 8 | FSCK          | User   |  100    | 39, 40, 42 | 3, 4, 5 |
 
 ### Project Partners
 
@@ -250,7 +207,7 @@ if necessary.
 
 * Requirements are spelled out in each specification.
 
-* Any deviation from the specification results in penalties.
+* Any deviation from the specification likely results in penalties.
 
 * Generating even a single warning during building your own code will
 result in a 10 percent penalty.
@@ -258,28 +215,37 @@ result in a 10 percent penalty.
 * Commenting is required. Failure to adequately comment is a mandatory 5
 percent penalty.
 
-### Extensions
+### Late work
 
-There will be none. The due date is the due date.
+Late work (factoring in one free grace day) will not be accepted. To
+state this differently, if an assignment is due on day *n*, you have
+until the end of day *n + 1* to turn it in. After that, it will not
+be accepted.
 
-### Warmup Projects
+## Grading Criteria
 
-Follow the specification, take a picture of the screen and turn in the
-picture.
+| Gradable Component | Weight  | Notes   |
+| ------------------ | ------: | -----   |
+| Projects           | 92%     |         |
+| Essay              | 6%      |         |
+| `getopt`           | 1%      | warm up |
+| `working xv6`      | 1%      | warm up |
+| Attendance         | Deduction Only     |         |
 
-## Office Hours
+## Accommodations
 
-I will have five hours per week available for individual help.
+There are no exams in this course and projects already include a grace
+day. Therefore, no accommodations ought to be necessary.
 
-* Monday 11 AM to Noon.
+## Attendance
 
-* Tuesday 11 AM to Noon.
+You receive 6 "free" absences. After that, every absence removes one
+percent from your final aggregate score. There are no "excused"
+absences. However, should a long term absence due to uncontrollable
+circumstances become necessary, please speak to me.
 
-* Wednesday 2 PM to 3 PM.
+## Academic Honesty
 
-* Thursday nights from 7 to 9 PM (two hours) during the weekly BBQ.
+All work will be examined for originality.
 
-All of these will be conducted via Zoom.
-
-There will be no other hours offered.
->>>>>>> e34e356a2886e4903cb8409f64322823d8563ac1
+The decision of the instructor is final.
