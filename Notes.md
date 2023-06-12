@@ -11,6 +11,20 @@ Free - Strongly Advisable
 
 ## Projects
 
+<<<<<<< HEAD
+| Ordinal | Project | Space | Notes |
+| ------- | ------- | ----- | ----- |
+| - | `getopt` | User | WSL or terminal |
+| 1 | Shell | User | WSL or terminal |
+| - | Working xv6 | N/A | N/A |
+| 2 | Add System Call | Kernel | xv6-riscv |
+| 3 | Add Guard Page | Kernel | xv6-riscv |
+| 4 | Stride Scheduler | User | WSL or terminal |
+| 5 | MLFQ Scheduler | User | WSL or terminal |
+| 6 | Semaphores | User | WSL or terminal |
+| 7 | Named Pipe | User | WSL or terminal |
+| 8 | File System | User | WSL of terminal |
+=======
 | # | Project     | Space  | Weight  | OSTEP      |
 | - | -------     | -----  | ------: | -----      |
 | - | `getopt`    | User   | N/A     | N/A        |
@@ -40,3 +54,4 @@ percent of the final grade.
 | `getopt` | 1% | warm up |
 | `working xv6 | 1% | demonstrate readiness |
 | running total | 97% |  |
+>>>>>>> e34e356a2886e4903cb8409f64322823d8563ac1

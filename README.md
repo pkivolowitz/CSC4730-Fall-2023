@@ -1,3 +1,137 @@
+<<<<<<< HEAD
+# CSC4730-Fall-2023
+
+## Meetings
+
+| Days | Times | Room |
+| ---- | ----- | ---- |
+| TR | 2:20 PM to 4:00 PM | CC 114 |
+
+## Office hours
+
+All office hours are held via [ZOOM](
+<https://carthage-edu.zoom.us/j/4456320007?pwd=UmZNa3ZDOTI2NHdhR21sSmxDR21KUT09>).
+This link will remain valid all term.
+
+| Day | Times |
+| --- | ----- |
+| M | 11 AM to 12 PM |
+| T | 11 AM to 12 PM |
+| R | 7 PM to 9 PM |
+| F | 12 PM to 1 PM |
+
+## Texts
+
+Primary: [OSTEP](<https://pages.cs.wisc.edu/~remzi/OSTEP/>) This book is
+free.
+
+Ancillary:
+
+1. Required: Advanced Programming in the UNIX environment, third
+   edition. Will be called Stevens and Rago.
+
+2. [xv6
+   risc-v](<https://pdos.csail.mit.edu/6.S081/2020/xv6/book-riscv-rev1.pdf>)
+   This book is free.
+
+## Readings
+
+There are two types of readings in this class.
+
+1. Assigned readings will come from OSTEP.
+
+2. Unassigned readings will come from the two ancillary texts. Being
+unassigned, you will **not** be told when to do them. Instead, review
+the table of contents in each of the two ancillary sources to get a
+general idea of that they contain. Then, later in the course, when you
+have a question, review the ancillary texts for details.
+
+### Topics covered
+
+The following are the topics which we can expect to be covered:
+
+| OSTEP | Topic | OSTEP | Topic |
+| ----- | ----- | ----- | ----- |
+|  4 | Processes | 21 | Swapping Mechanisms |
+|  5 | Process API | 22 | Swapping Policies |
+|  6 | Direct Execution | 23 | Complete VM System |
+|  7 | CPU Scheduling | 26 | Concurrency and Threads |
+|  8 | Multi-level Feedback | 27 | Thread API |
+|  9 | Lottery Scheduling | 28 | Locks |
+| 10 | Multi-CPU Scheduling | 29 | Locked Data Structures |
+| 13 | Address Spaces | 30 | Condition Variables |
+| 14 | Memory API | 31 | Semaphores |
+| 15 | Address Translation | 32 | Concurrency Bugs |
+| 16 | Segmentation | 33 | Event-based Concurrency |
+| 17 | Free Space Management | 34
+| 18 | Introduction to Paging |
+| 19 | Translation Lookaside Buffers |
+| 20 | Advanced Page Table |
+
+
+### man pages
+
+Since early days, Unix has had the `man` command. For example:
+
+`man man`
+
+or
+
+`man 2 chdir`
+
+## Late work
+
+Late work (factoring in one free grace day) will not be accepted. To
+state this differently, if an assignment is due on day *n*, you have
+until the end of day *n + 1* to turn it in. After that, it will not
+be accepted.
+
+## Attendance
+
+Attendance will be taken at nearly every class. The only exceptions will
+be when I am so excited to get down to business, that I forget to take
+it.
+
+You get 6 free absences. After that each absence will remove 1 percent
+from your aggregate score at the end of the term. All absences are
+treated equally. That is, there are no "excused" absences. The number
+of free absences equates to three weeks of missed class time so it is
+unlikely you'll exceed this and incur a penalty.
+
+## Being late
+
+Once attendance has been taken, anyone arriving after than will be
+counted as absent. Generally, attendance will end between five and ten
+minutes after the official start of class.
+
+## Leaving early
+
+No, your coach cannot force you to leave class early to make practice.
+
+## Essays
+
+[Here](./therac.md) is a link to one essay assignment. You can look at
+it at your convenience but do it only when assigned.
+
+## Projects
+
+Below is a listing of 10 projects of which only 8 are truly projects.
+One is a tutorial and another is just to provide proof you're ready to
+tackle two other projects.
+
+| Ordinal | Project | Space | Notes |
+| ------- | ------- | ----- | ----- |
+| - | `getopt` | User | WSL or terminal |
+| 1 | Shell | User | WSL or terminal |
+| - | Working xv6 | N/A | N/A |
+| 2 | Add System Call | Kernel | xv6-riscv |
+| 3 | Add Guard Page | Kernel | xv6-riscv |
+| 4 | Stride Scheduler | User | WSL or terminal |
+| 5 | MLFQ Scheduler | User | WSL or terminal |
+| 6 | Semaphores | User | WSL or terminal |
+| 7 | Named Pipe | User | WSL or terminal |
+| 8 | File System | User | WSL of terminal |
+=======
 # Syllabus CSC4730-Fall-2023
 
 ## Course Summary
@@ -148,3 +282,4 @@ I will have five hours per week available for individual help.
 All of these will be conducted via Zoom.
 
 There will be no other hours offered.
+>>>>>>> e34e356a2886e4903cb8409f64322823d8563ac1
