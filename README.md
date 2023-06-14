@@ -14,8 +14,7 @@ and is very accessible.
 * We will leverage the Unix programming environment in a deep and
 meaningful way. You will learn very marketable skills.
 
-* We will do up to 8 projects both inside an OS itself and in userland
-programs.
+* We will do up to 8 projects both inside an OS itself and in userland.
 
 ## Learning Outcomes
 
@@ -92,7 +91,7 @@ have a question, review the ancillary texts for details.
 You expected to have consulted the texts before approaching me with
 questions.
 
-### Topics covered
+### Topics Covered
 
 The following are the topics which we can expect to be covered:
 
@@ -109,12 +108,74 @@ The following are the topics which we can expect to be covered:
 | 14 | Memory API | 31 | Semaphores |
 | 15 | Address Translation | 32 | Concurrency Bugs |
 | 16 | Segmentation | 33 | Event-based Concurrency |
-| 17 | Free Space Management | 34
-| 18 | Introduction to Paging |
-| 19 | Translation Lookaside Buffers |
-| 20 | Advanced Page Table |
+| 17 | Free Space Management | 36 | I/O Devices |
+| 18 | Introduction to Paging | 37 | Hard Disk Drives |
+| 19 | Translation Lookaside Buffers | 38 | RAID |
+| 20 | Advanced Page Table | 39 | Files and Directories |
+| | | 40 | File System Implementation |
 
-### man pages
+There are 31 chapters listed above. While we may not get to all, you can
+be certain there will be weeks in which you will be responsible for
+reading more than one chapter. This is not a major burden as the
+chapters are short and the text is written at a popular level.
+
+### Environment
+
+All projects require use of WSL on Windows or the terminal on the Mac.
+
+The easiest way to install WSL (Ubuntu) on Windows 11 is to run a
+command prompt as Administrator and then:
+
+`wsl --install`
+
+If this doesn't work, use the Microsoft Store to install Ubuntu.
+
+It is possible you'll have to turn on the Windows Subsystem for Linux
+in the Add Remove Windows Features settings.
+
+I recommend you select a trivial user name and password. For example,
+for my `WSL` I use user name `a` and password `a`.
+
+You'll then need to install the C and C++ environment.
+
+```text
+sudo -i
+apt update
+apt upgrade
+apt install build-essential gdb
+```
+
+On the Mac, ensure you have `gcc` and `g++` available to you on the
+command line.
+
+### Installing xv6
+
+On WSL:
+
+```text
+sudo -i
+apt update
+apt install crossbuild-essential-riscv64
+exit
+# decide where you want to load the original xv6
+# and change directory to there.
+git clone https://github.com/mit-pdos/xv6-riscv.git
+```
+
+Make a copy of the xv6 directory for each of the projects using it.
+
+On Mac:
+
+Ensure you have the latest `brew`.
+
+You'll also need the riscv toolchain.
+
+`brew install riscv-gnu-toolchain`
+
+And as per Windows, get the xv6 repo. It is likely there is a small
+change to be made to the `makefile`.
+
+### `man` Pages
 
 Since early days, Unix has had the `man` command. For example:
 
@@ -134,17 +195,21 @@ it.
 
 You get 6 free absences. After that each absence will remove 1 percent
 from your aggregate score at the end of the term. All absences are
-treated equally. That is, there are no "excused" absences. The number
-of free absences equates to three weeks of missed class time so it is
-unlikely you'll exceed this and incur a penalty.
+treated equally. That is, there are no "excused" absences. 
 
-## Being late
+The number of free absences equates to three weeks of missed class time
+so it is unlikely you'll exceed this and incur a penalty.
+
+Should a long-term absence due to uncontrollable circumstances become
+necessary, please speak to me as soon as possible.
+
+## Arriving Late
 
 Once attendance has been taken, anyone arriving after than will be
 counted as absent. Generally, attendance will end between five and ten
 minutes after the official start of class.
 
-## Leaving early
+## Leaving Early
 
 No, your coach cannot force you to leave class early to make practice.
 
@@ -153,7 +218,7 @@ No, your coach cannot force you to leave class early to make practice.
 [Here](./therac.md) is a link to an essay assignment. You can look at
 it at your convenience but do it only when assigned. The essay is six
 percent of your grade and, at 500 words, is one third to one sixth the
-length of a typical college essay.
+length of a typical college essay. This is six percent of your grade.
 
 ## Projects
 
@@ -171,13 +236,17 @@ material. The indicated chapters will be most helpful.
 The *S&R* column indicates which chapters of Stevens and Rago can be
 helpful.
 
+The warmups each contribute one point to your final grade.
+
+The projects together contribute 92 percent of your final grade.
+
 | # | Project       | Space  | Weight  | OSTEP      | S&R |
 | - | -------       | -----  | ------: | -----      | --- |
-| - | `getopt`      | User   | N/A     | N/A        | N/A |
+| - | [`getopt`](./projects/warmups/getopt/) | User   | N/A     | N/A        | N/A |
 | 1 | Shell         | User   |  70     | 4, 5       | 1, 3, 4, 5, 8, 15 |
 | - | Working xv6   | N/A    |  N/A    | N/A        | N/A |
 | 2 | System Call   | Kernel |  60     | 6          | N/A |
-| 3 | Stride / MLFQ | User   |  70     | 7, 8, 9    | N/A |
+| 3 | Stride / MLFQ | User   |  60     | 7, 8, 9    | N/A |
 | 4 | Guard Page    | Kernel |  60     | 13         | N/A |
 | 5 | Free Space    | User   |  70     | 17         | 7   |
 | 6 | Semaphores    | User   |  70     | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
@@ -222,6 +291,10 @@ state this differently, if an assignment is due on day *n*, you have
 until the end of day *n + 1* to turn it in. After that, it will not
 be accepted.
 
+I award partial credit even for substantial but incomplete work. This is
+unlike the real world where incomplete work earns termination from your
+employment. So hand in what you have... it's better than a zero.
+
 ## Grading Criteria
 
 | Gradable Component | Weight  | Notes   |
@@ -230,22 +303,23 @@ be accepted.
 | Essay              | 6%      |         |
 | `getopt`           | 1%      | warm up |
 | `working xv6`      | 1%      | warm up |
-| Attendance         | Deduction Only     |         |
+| Attendance         | Deduction Only    |         |
+
+There is little likelihood a curve will be applied in computing your
+final grade.
 
 ## Accommodations
 
 There are no exams in this course and projects already include a grace
 day. Therefore, no accommodations ought to be necessary.
 
-## Attendance
-
-You receive 6 "free" absences. After that, every absence removes one
-percent from your final aggregate score. There are no "excused"
-absences. However, should a long term absence due to uncontrollable
-circumstances become necessary, please speak to me.
-
 ## Academic Honesty
 
 All work will be examined for originality.
 
 The decision of the instructor is final.
+
+## Bonus Materials
+
+See [here](./pptx/) for some very old slides I made describing a few
+topics in very succinct terms.
