@@ -84,6 +84,14 @@ The number of live processes: 3
 $
 ```
 
+`count` is the name of the user level program you must write.
+
+This is your first user level program:
+
+* Includes must be `kernel/types.h` and `user.h`.
+
+* The user level program is trivial.
+
 The line containing three prompt characters is where ^D was enter
 causing a shell to exit.
 
