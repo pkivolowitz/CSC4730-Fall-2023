@@ -1,0 +1,24 @@
+New job: A added with priority: 100
+Job: A scheduled.
+New job: B added with priority: 200
+Job: B scheduled.
+Running:
+NAME    STRIDE  PASS     PRI
+B       500     0        200
+Runnable:
+NAME    STRIDE  PASS     PRI
+A       1000    1000     100
+Job: B scheduled.
+Running:
+NAME    STRIDE  PASS     PRI
+B       500     500      200
+Runnable:
+NAME    STRIDE  PASS     PRI
+A       1000    1000     100
+Job: A scheduled.
+Running:
+NAME    STRIDE  PASS     PRI
+A       1000    1000     100
+Runnable:
+NAME    STRIDE  PASS     PRI
+B       500     1000     200

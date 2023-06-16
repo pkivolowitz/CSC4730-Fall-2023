@@ -1,0 +1,27 @@
+newjob,A,A runs.
+newjob,B
+newjob,C
+interrupt,A goes to 1. B runs.
+interrupt,B goes to 1. C runs.
+interrupt,C goes to 1. A runs.
+interrupt,A goes to 2. B runs.
+interrupt,B goes to 2. C runs.
+interrupt,C goes to 2. A runs.
+interrupt,A goes to 3. B runs.
+block,B is blocked. C runs.
+interrupt,C goes to 3. A runs.
+interrupt,A remains at 3. C runs.
+interrupt,C remains at 3. A runs.
+running
+runnable
+blocked
+interrupt,A remains at 3. C runs.
+unblock,B,B is unblocked. It supersedes C.
+interrupt,B goes to 3. A runs.
+running
+runnable
+blocked
+epoch
+running
+runnable
+blocked

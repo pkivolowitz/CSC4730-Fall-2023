@@ -1,0 +1,37 @@
+New job: A added.
+Job: A scheduled.
+New job: B added.
+Job: B scheduled.
+Runnables:
+NAME    QUEUE   
+A       1       
+Running:
+NAME    QUEUE   
+B       0       
+Job: A scheduled.
+Runnables:
+NAME    QUEUE   
+B       1       
+Running:
+NAME    QUEUE   
+A       1       
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: A scheduled.
+Runnables:
+NAME    QUEUE   
+B       3       
+Running:
+NAME    QUEUE   
+A       3       
+Job: A completed.
+Job: B scheduled.
+Job: B completed.
+System is idle.
+Runnables:
+None
+Running:
+None

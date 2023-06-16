@@ -1,0 +1,10 @@
+New job: A added with priority: 100
+Job: A scheduled.
+New job: B added with priority: 100
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.

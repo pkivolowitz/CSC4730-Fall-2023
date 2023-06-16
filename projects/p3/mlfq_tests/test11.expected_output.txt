@@ -1,0 +1,50 @@
+New job: A added.
+Job: A scheduled.
+New job: B added.
+New job: C added.
+Job: B scheduled.
+Job: C scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: C scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: B blocked.
+Job: C scheduled.
+Job: A scheduled.
+Job: C scheduled.
+Job: A scheduled.
+Running:
+NAME    QUEUE   
+A       3       
+Runnables:
+NAME    QUEUE   
+C       3       
+Blocked:
+NAME    QUEUE   
+B       2       
+Job: C scheduled.
+Job: B has unblocked.
+Job: B scheduled.
+Job: A scheduled.
+Running:
+NAME    QUEUE   
+A       3       
+Runnables:
+NAME    QUEUE   
+C       3       
+B       3       
+Blocked:
+None
+Job: C lifted up.
+Job: B lifted up.
+Job: A lifted up.
+Running:
+NAME    QUEUE   
+A       0       
+Runnables:
+NAME    QUEUE   
+C       0       
+B       0       
+Blocked:
+None

@@ -1,0 +1,42 @@
+New job: A added with priority: 100
+Job: A scheduled.
+New job: B added with priority: 300
+New job: C added with priority: 100
+Job: B scheduled.
+Job: C scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: A scheduled.
+Job: C scheduled.
+Job: C blocked.
+Job: B scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Runnable:
+NAME    STRIDE  PASS     PRI
+A       1000    5000     100
+Running:
+NAME    STRIDE  PASS     PRI
+B       333     4995     300
+Blocked:
+NAME    STRIDE  PASS     PRI
+C       1000    1000     100
+Job: C has unblocked. Pass set to: 4995
+Job: C scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: B scheduled.
+Job: B scheduled.

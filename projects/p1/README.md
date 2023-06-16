@@ -383,4 +383,3 @@ zip file contains a subfolder, I will remove 5 points.
 The class will receive a rubric when grading is complete that describes errors and penalties.
 
 Both partners get the same grade without exception.
-

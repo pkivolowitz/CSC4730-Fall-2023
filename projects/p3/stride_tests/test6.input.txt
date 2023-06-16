@@ -1,0 +1,13 @@
+newjob,A,100
+newjob,B,100
+interrupt
+interrupt
+interrupt
+interrupt
+interrupt
+block
+interrupt
+interrupt
+interrupt
+finish
+

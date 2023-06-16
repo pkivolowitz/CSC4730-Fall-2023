@@ -1,0 +1,12 @@
+newjob,A,A runs
+newjob,B
+interrupt,A goes to 1. B runs
+interrupt,B goes to 1. A runs
+interrupt,A goes to 2. B runs
+block,B blocks. A runs
+block,A blocks. System is idle.
+blocked
+epoch
+running
+runnable
+blocked

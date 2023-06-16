@@ -1,0 +1,6 @@
+New job: a added.
+Job: a scheduled.
+Job: a scheduled.
+Job: a scheduled.
+Job: a completed.
+System is idle.

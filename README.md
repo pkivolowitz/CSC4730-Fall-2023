@@ -246,7 +246,7 @@ The projects together contribute 92 percent of your final grade.
 | 1 | Shell         | User   |  70     | 4, 5       | 1, 3, 4, 5, 8, 15 |
 | - | Working xv6   | N/A    |  N/A    | N/A        | N/A |
 | 2 | System Call   | Kernel |  60     | 6          | N/A |
-| 3 | Stride / MLFQ | User   |  60     | 7, 8, 9    | N/A |
+| 3 | Stride / MLFQ | User   |  70     | 7, 8, 9    | N/A |
 | 4 | Guard Page    | Kernel |  60     | 13         | N/A |
 | 5 | Free Space    | User   |  70     | 17         | 7   |
 | 6 | Semaphores    | User   |  70     | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |

@@ -1,0 +1,16 @@
+New job: A added.
+Job: A scheduled.
+New job: B added.
+Job: B scheduled.
+Job: A scheduled.
+Job: B scheduled.
+Job: B blocked.
+Job: A scheduled.
+Job: A scheduled.
+Job: A scheduled.
+Job: A completed.
+System is idle.
+Job: B has unblocked.
+Job: B scheduled.
+Job: B completed.
+System is idle.

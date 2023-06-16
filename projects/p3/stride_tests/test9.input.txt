@@ -1,0 +1,8 @@
+newjob,A,100
+newjob,B,100
+interrupt
+interrupt
+interrupt
+block
+block
+interrupt
