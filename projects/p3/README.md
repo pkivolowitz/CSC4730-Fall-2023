@@ -30,6 +30,9 @@ Each of these programs has its own specification:
 
 * [MLFQ](./mlfq.md)
 
+The data each of these consume is very similar so the work you do on
+parsing the input can be shared across both programs.
+
 ## What to Hand In
 
 Zip your two source code files together and submit that.

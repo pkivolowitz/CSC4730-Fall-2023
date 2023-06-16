@@ -1,18 +1,14 @@
 # Userland Stride Scheduler
 
 In this project you will build a stride-based simulated scheduler in
-userland (i.e. in Linux, not xv6). Your scheduler will read a data file
-containing information simulating timer interrupts, job arrivals, job
-terminations, etc. Your output will be graded against known good
-results. Any deviation (even by a single space) may be counted as wrong,
-so follow the specification completely.
+userland. Your scheduler will read a data file containing information
+simulating timer interrupts, job arrivals, job terminations, etc. Your
+output will be graded against known good results. Any deviation (even by
+a single space) may be counted as wrong, so follow the specification
+completely.
 
 You will be able to run tests against my grading script to debug any
 textual differences.
-
-## Partner rules
-
-No partners - this project is solo.
 
 ## Stride Scheduler
 
@@ -26,12 +22,12 @@ Your program will take just one argument - the name of the data file to execute.
 
 This project can be coded natively on the Mac.
 
-This project must be coded under WSL on Windows or on a Linux machine. Windows does not have `getopt()`. Why? Microsoft. The one written for PD is cumbersome to install. So straight
-Windows is off the menu.
+This project must be coded under WSL on Windows or on a Linux machine.
 
 ## Input
 
-Your program will take a data file as its command line argument. It contains comma separated lines with the following syntax:
+Your program will take a data file as its command line argument. It
+contains comma separated lines with the following syntax:
 
 | opcode | argument 1 | argument 2 | meaning |
 | ------ | ---------- | ----------  | ------- |
@@ -72,7 +68,7 @@ Error. System is idle.
 
 ### interrupt
 
-The currently running task has completed its quantum. Adjust your bookkeeping. The scheduler needs to run again. 
+The currently running task has completed its quantum. Adjust your bookkeeping. The scheduler needs to run again.
 
 ```text
 Job: C scheduled.
@@ -86,7 +82,8 @@ Error. System is idle.
 
 ### block
 
-The currently running task has become blocked. Perhaps it is asking for an I/O.
+The currently running task has become blocked. Perhaps it is asking for
+an I/O. The task will remain blocked until it is `unblock`ed.
 
 ```text
 Job: A blocked.
@@ -100,13 +97,13 @@ Error. System is idle.
 
 ### unblock
 
-The named job has become unblocked. 
+The named job has become unblocked.
 
 ```text
 Job: A has unblocked. Pass set to: 5000
 ```
 
-It is an error if the named job was not blocked. 
+It is an error if the named job was not blocked.
 
 ```text
 Error. Job: C not blocked.
@@ -149,7 +146,9 @@ A       500     2000  200
 
 ## Picking the next task to schedule
 
-The task with the lowest pass value is chosen to run next. In the event of a tie, sort alphabetically. If ```A``` and ```B``` have the same pass value, ```A``` will run.
+The task with the lowest pass value is chosen to run next. In the event
+of a tie, sort alphabetically. If ```A``` and ```B``` have the same pass
+value, ```A``` will run.
 
 ```text
 Job: C scheduled.
@@ -157,16 +156,21 @@ Job: C scheduled.
 
 ## Running the tests
 
-The results of the stride schedule are deterministic. Given the same input, you will get the same output. Therefore, automatic testing is possible.
+The results of the stride schedule are deterministic. Given the same
+input, you will get the same output. Therefore, automatic testing is
+possible.
 
-I provide a `bash` script for testing purposes. The script takes two command line options.
+I provide a `bash` script for testing purposes. The script takes two
+command line options.
 
 | option | required? | argument | purpose |
 | ------ | --------- | -------- | ------- |
 | a | no | progname | specifies name of your executable - defaults to ./a.out |
 | i | yes | testroot | specifies the root name of the test to run |
 
-The folder containing the test script is meant to contain the folder `tests` where the test data is actually stored. So, if you specify `-i test1`, the actual data file will resolve to `tests/test1.input.txt`.
+The folder containing the test script is meant to contain the folder
+`tests` where the test data is actually stored. So, if you specify `-i
+test1`, the actual data file will resolve to `tests/test1.input.txt`.
 
 Here is sample output from a test:
 
@@ -220,6 +224,10 @@ Test finished
 hyde pk_stride_scheduler $>
 ```
 
-You will be given only *some* of the tests I will use for grading. Some, I hold in reserve to test corner cases, etc. If you pass all the tests you are given, you have a reasonable change of a high score but this is not a certainty.
+You will be given only *some* of the tests I will use for grading. Some,
+I hold in reserve to test corner cases, etc. If you pass all the tests
+you are given, you have a reasonable change of a high score but this is
+not a certainty.
 
-Feel free to read the source code of the test script to see an example of `bash` scripting.
+Feel free to read the source code of the test script to see an example
+of `bash` scripting.

@@ -1,6 +1,6 @@
 # Userland Multilevel Feedback Queues (MLFQ)
 
-Hooray! You get to reuse some code from the previous project. The
+Hooray! You get to reuse some code from the Stride project. The
 commands you must handle are repeated from the previous project.
 
 In this project you will build a Multilevel Feedback Queue simulated
@@ -16,21 +16,8 @@ textual differences.
 ## Requirements Embedded in the Specification
 
 To encourage you to read this specification thoroughly, certain project
-requirements are embedded inline in this document. Failure to
-implement requires will result in points off.
-
-## Partner rules
-
-You may use a partner on this project.
-
-One partner must turn in the code. This code must list the authors.
-If you have no partner, then say so. If you have a partner, you must
-identify them. Failure to do this will be points off.
-
-The other partner must hand in only a text file stating who the
-partners are. A text file is a text file. It is not a PDF, not a
-Google Doc, not a web page, not a Word file and not a spreadsheet.
-Failure to do this will be points off.
+requirements are embedded inline in this document. Failure to implement
+requires will result in points off.
 
 ## Choice of Language
 
@@ -54,15 +41,15 @@ fashion.
 * Rule 3: When a job enters the system, it is placed at the highest
 priority (the topmost queue).
 
-* Rule 4: Once a job uses up its time allotment at a given level (regardless
-of how many times it has given up the CPU), its priority is
+* Rule 4: Once a job uses up its time allotment at a given level
+(regardless of how many times it has given up the CPU), its priority is
 reduced (i.e., it moves down one queue).
 
-* Rule 5: After some time period S, move all the jobs in the system
-to the topmost queue.
+* Rule 5: After some time period S, move all the jobs in the system to
+the topmost queue.
 
-In the above, references to Priority equates to which queue a process
-is on.
+In the above, references to Priority equates to which queue a process is
+on.
 
 ## Command Line Options
 
@@ -86,8 +73,6 @@ This project can be coded natively on the Mac, you don't need to use
 a Linux VM.
 
 This project must be coded under WSL on Windows or on a Linux machine.
-Windows does not have `getopt()`. Why? Microsoft. The one written for PD
-is cumbersome to install. So, straight Windows is off the menu.
 
 ## Input
 
@@ -114,8 +99,8 @@ My test input is guaranteed to have correct syntax so you do not have to
 check for errors.
 
 Note that if you create your own tests (you should), you can add
-comments by appending a comma plus your comments at the end of an
-input line. Don't put commas in your comments. See
+comments by appending a comma plus your comments at the end of an input
+line. Don't put commas in your comments. See
 [this](./tests/test11.input.txt) for an example.
 
 For example:
@@ -314,16 +299,6 @@ The folder containing the test script is meant to contain the folder
 `tests` where the test data is actually stored. So, if you specify `-i
 test1`, the actual data file will resolve to `tests/test1.input.txt`.
 
-Here is sample output from a test:
-
-```text
-```
-
-Here is output from a more sophisticated test:
-
-```text
-```
-
 You will be given only *some* of the tests I will use for grading. Some,
 I hold in reserve to test corner cases, etc. If you pass all the tests
 you are given, you have a reasonable change of a high score but this is
@@ -334,17 +309,12 @@ of `bash` scripting.
 
 ## What to Turn In
 
-This is *the second time* this requirement is being stated. I must
-*really, really* mean it.
-
 One partner must turn in the code. This code must list the authors.
 If you have no partner, then say so. If you have a partner, you must
 identify them. Failure to do this will be points off.
 
 The other partner must hand in only a text file stating who the
-partners are. A text file is a text file. It is not a PDF, not a
-Google Doc, not a web page, not a Word file and not a spreadsheet.
-Failure to do this will be points off.
+partners are.
 
 ## Setting Expectations
 
@@ -367,7 +337,7 @@ interest purposes only. You don't have to follow this example:
 # include <iomanip>
 ```
 
-Remember: 
+Remember:
 
 * no magic numbers.
 
