@@ -1,7 +1,6 @@
-# Userland Multilevel Feedback Queues (MLFQ)
+# Multilevel Feedback Queues (MLFQ)
 
-Hooray! You get to reuse some code from the Stride project. The
-commands you must handle are repeated from the previous project.
+The commands you must handle are repeated from the previous project.
 
 In this project you will build a Multilevel Feedback Queue simulated
 scheduler in userland. Your scheduler will read a data file
@@ -16,8 +15,8 @@ textual differences.
 ## Requirements Embedded in the Specification
 
 To encourage you to read this specification thoroughly, certain project
-requirements are embedded inline in this document. Failure to implement
-requires will result in points off.
+requirements are embedded *inline* in this document. Failure to implement
+requirements will result in points off.
 
 ## Choice of Language
 
@@ -62,10 +61,12 @@ using `cerr`. The error message strings are:
 
 * "Missing input file name." and
 
-* Input file failed to open.
+* "Input file failed to open."
 
 If these errors occur, your program must terminate with a return code
-of 1.
+of 1. You can check the return code of a program using:
+
+`$ echo $?`
 
 ## Platform
 
@@ -92,16 +93,15 @@ contains *comma separated value* lines with the following syntax:
 | epoch | | | An Epoch has elapsed. Process as per MLFQ algorithm - this is not in your previous project |
 
 **\*** Note that this project's "newjob" does not take a PRIORITY. This
-is different from your previous project. It is assigned to the topmost
+is different from your previous project. A new job is assigned to the topmost
 queue as per the MLFQ algorithm.
 
 My test input is guaranteed to have correct syntax so you do not have to
 check for errors.
 
-Note that if you create your own tests (you should), you can add
-comments by appending a comma plus your comments at the end of an input
-line. Don't put commas in your comments. See
-[this](./tests/test11.input.txt) for an example.
+Note that if you create your own tests (you should), you can add comments by
+appending a comma plus your comments at the end of an input line. Don't put
+commas in your comments. See [this](./tests/test11.input.txt) for an example.
 
 For example:
 
@@ -117,7 +117,8 @@ Lines 1 and 4 have comments.
 ## NO MAGIC NUMBERS
 
 You must not use any magic numbers. Any numeric literals should be
-`const` variables with **good descriptive names**.
+`const` variables with **good descriptive names**. The exceptions to this could
+be 0 and 1.
 
 ## The Queues
 
@@ -127,20 +128,19 @@ There shall be a total of 4 queues named 0 through 3.
 
 Each queue is managed with Round Robin.
 
-The quantum is 10ms. The milliseconds as units is, of
-course, meaningless as this is a simulation.
+The quantum is 10ms. The milliseconds as units is, of course, meaningless as
+this is a simulation.
 
-The Epoch is defined as 1000ms.
-
-Any deviation from this will result in points off.
+The Epoch is defined as 1000ms. But once again, for the purpose of this
+simulation, time is kind of meaningless.
 
 ## Operation
 
 ### newjob
 
-A new job is entered into the system. Its name is given.
-Assume all job names are unique. A new job's arrival does not cause a
-rescheduling unless the system was idle.
+A new job is entered into the system. Its name is given. Assume all job names
+are unique. A new job's arrival does not cause a rescheduling unless the system
+was idle. Your response:
 
 ```text
 New job: C added.
@@ -168,6 +168,9 @@ Error. System is idle.
 The currently running task has completed its quantum. Adjust your
 bookkeeping. The scheduler needs to run again.
 
+In a real system, this would happen when a process has consumed 10ms of
+CPU time. Another process would be given a turn.
+
 ```text
 Job: C scheduled.
 ```
@@ -180,15 +183,15 @@ Error. System is idle.
 
 ### block
 
-The currently running task has become blocked. Perhaps it is asking for
-an I/O. The argument specifies the number of milliseconds to be added
-to the task's quantum.
+The currently running task has become blocked. Perhaps it is asking for an I/O,
+for example.
 
 ```text
 Job: A blocked.
 ```
 
-It is an error if the system is idle.
+It is an error if the system is idle, since no process was running that could
+become blocked.
 
 ```text
 Error. System is idle.
@@ -196,8 +199,8 @@ Error. System is idle.
 
 ### unblock
 
-The named job has become unblocked. Return it to the queue it
-came from and reschedule.
+The named job has become unblocked. Return it to the queue it came from and
+reschedule.
 
 ```text
 Job: A has unblocked.
@@ -209,14 +212,13 @@ It is an error if the named job was not blocked.
 Error. Job: C not blocked.
 ```
 
-Unblocked jobs return to the runnables onto the queue on which they
-were last found as per MLFQ. The scheduler is not run unless
-the system was idle.
+Unblocked jobs return to the runnables on the queue on which they were last
+found as per MLFQ. The scheduler to ensure Rule 1 is maintained.
 
 ### runnable
 
-The runnables, if any, are listed. Note this command's output
-is quite different from the previous project. Example:
+The runnables, if any, are listed. Note this command's output is quite different
+from the previous project. Example:
 
 ```text
 Runnables:
@@ -255,12 +257,10 @@ J       2
 
 ### epoch
 
-You will be told when an epoch has
-expired when you receive an "epoch" command. Handle this as per
-the MLFQ algorithm. Note that "epoch" does **not** cause a
-rescheduling. That is, a process running when you receive an
-"epoch" will remain running but will also be marked as coming
-from the initial highest priority queue.
+An epoch has expired when you receive an "epoch" command. Handle this as per the
+MLFQ algorithm. Note that "epoch" does **not** cause a rescheduling. That is, a
+process running when you receive an "epoch" will remain running but will also be
+marked as coming from the initial highest priority queue.
 
 Here is a sample output from "epoch":
 
@@ -274,8 +274,8 @@ Job: A lifted up.
 
 ## Picking the Next Task to Schedule
 
-When a rescheduling is required, pick the next task to run according
-to the MLFQ algorithm.
+When a rescheduling is required, pick the next task to run according to the MLFQ
+algorithm.
 
 ```text
 Job: C scheduled.
@@ -283,38 +283,31 @@ Job: C scheduled.
 
 ## Running the tests
 
-The results of the stride schedule are deterministic. Given the same
-input, you will get the same output. Therefore, automatic testing is
-possible.
+The results of the stride schedule are deterministic. Given the same input, you
+will get the same output. Therefore, automatic testing is possible.
 
-I provide a `bash` script for testing purposes. The script takes two
-command line options.
+I provide a `bash` script for testing purposes. The script takes two command
+line options.
 
 | option | required? | argument | purpose |
 | ------ | --------- | -------- | ------- |
 | a | no | progname | specifies name of your executable - defaults to ./a.out |
 | i | yes | testroot | specifies the root name of the test to run |
 
-The folder containing the test script is meant to contain the folder
-`tests` where the test data is actually stored. So, if you specify `-i
-test1`, the actual data file will resolve to `tests/test1.input.txt`.
+The folder containing the test script is meant to contain the folder `tests`
+where the test data is actually stored. So, if you specify `-i test1`, the
+actual data file will resolve to `tests/test1.input.txt`.
 
-You will be given only *some* of the tests I will use for grading. Some,
-I hold in reserve to test corner cases, etc. If you pass all the tests
-you are given, you have a reasonable change of a high score but this is
-not a certainty.
+You will be given only *some* of the tests I will use for grading. Some, I hold
+in reserve to test corner cases, etc. If you pass all the tests you are given,
+you have a reasonable change of a high score but this is not a certainty.
 
-Feel free to read the source code of the test script to see an example
-of `bash` scripting.
+Feel free to read the source code of the test script to see an example of `bash`
+scripting.
 
 ## What to Turn In
 
-One partner must turn in the code. This code must list the authors.
-If you have no partner, then say so. If you have a partner, you must
-identify them. Failure to do this will be points off.
-
-The other partner must hand in only a text file stating who the
-partners are.
+See [here](./README.md).
 
 ## Setting Expectations
 

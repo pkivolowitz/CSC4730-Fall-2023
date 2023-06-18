@@ -15,6 +15,10 @@ scheduler.
 The other program will read formatted data, feeding it into an MLFQ
 scheduler.
 
+The format of the data is almost the same for the two programs. Writing that
+portion in one program can be adapted for the other and both partners can
+finish the pair of programs in parallel.
+
 ## Deadlines
 
 You and your assigned partner have 7 days to complete this assignment
@@ -35,7 +39,7 @@ parsing the input can be shared across both programs.
 
 ## What to Hand In
 
-Zip your two source code files together and submit that.
+Zip your source code files together and submit that.
 
 ## Partners
 
