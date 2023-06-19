@@ -228,7 +228,8 @@ tackle the two kernel projects.
 
 The *Weight* column provides a weighting of the project within the
 Project Grading Component. It suggests my anticipation of the relative
-difficulty of each project compared to the others.
+difficulty of each project compared to the others. It also defines the
+weight given to your score within the projects grading category.
 
 The *OSTEP* column indicates how the projects correspond to course
 material. The indicated chapters will be most helpful.
@@ -243,15 +244,15 @@ The projects together contribute 92 percent of your final grade.
 | # | Project       | Space  | Weight  | OSTEP      | S&R |
 | - | -------       | -----  | ------: | -----      | --- |
 | - | [`getopt`](./projects/warmups/getopt/) | User   | N/A     | N/A        | N/A |
-| 1 | Shell         | User   |  70     | 4, 5       | 1, 3, 4, 5, 8, 15 |
-| - | Working xv6   | N/A    |  N/A    | N/A        | N/A |
-| 2 | System Call   | Kernel |  60     | 6          | N/A |
-| 3 | Stride / MLFQ | User   |  70     | 7, 8, 9    | N/A |
-| 4 | Guard Page    | Kernel |  60     | 13         | N/A |
-| 5 | Free Space    | User   |  70     | 17         | 7   |
-| 6 | Semaphores    | User   |  70     | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
-| 7 | Named Pipe    | User   |  90     | 14, 17, 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
-| 8 | FSCK          | User   |  100    | 39, 40, 42 | 3, 4, 5 |
+| 1 | [Shell](./projects/p1) | User   |  70  | 4, 5       | 1, 3, 4, 5, 8, 15 |
+| - | Working xv6 | N/A    |  N/A    | N/A   | N/A |
+| 2 | [System Call](./projects/p2/) | Kernel |  60     | 6          | N/A |
+| 3 | [Schedulers](./projects/p3) | User     |  70     | 7, 8, 9    | N/A |
+| 4 | [Guard Page](./projects/p4/) | Kernel  |  60     | 13         | N/A |
+| 5 | [Allocators](./projects/p5) | User   |  70     | 17         | 7   |
+| 6 | [Semaphores](./projects/p6/) | User  |  70     | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
+| 7 | [Pipe](./projects/p7) | User   |  90 | 14, 17, 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
+| 8 | [FSCK](./projects/p8) | User   | 100 | 39, 40, 42 | 3, 4, 5 |
 
 ### Project Partners
 
