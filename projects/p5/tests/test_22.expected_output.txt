@@ -1,0 +1,16 @@
+Allocated: 512 kibibytes starting at: 0
+
+Free List is empty
+
+Allocated List
+ Index   Start  Length
+[0000]       0     512
+
+Freed block starting at: 0
+
+Free List
+ Index   Start  Length
+[0000]       0     512
+
+Allocated List is empty
+

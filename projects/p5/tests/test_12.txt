@@ -1,0 +1,26 @@
+# Next Fit
+# Tests next index wrap around.
+a 32	0   to    31
+a 32    32  to    63
+a 32    64  to    95
+a 32    96  to   127
+f 32
+p
+a 352
+p
+a 16
+p
+a 48    should fail
+p
+a 32	should allocate at 32
+p
+a 16    should allocate at 496
+p
+f 128
+p
+f 480
+p
+f 64
+p
+f 96
+p

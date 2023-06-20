@@ -1,0 +1,11 @@
+# Next Fit
+# Tests making a hole then giving part of it away
+a 16
+a 16
+a 16
+a 16
+p
+f 16
+p
+a 8
+p

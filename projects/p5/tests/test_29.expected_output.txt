@@ -1,0 +1,66 @@
+Allocated: 32 kibibytes starting at: 0
+
+Allocated: 48 kibibytes starting at: 32
+
+Allocated: 64 kibibytes starting at: 80
+
+Allocated: 96 kibibytes starting at: 144
+
+Allocated: 128 kibibytes starting at: 240
+
+Allocated: 96 kibibytes starting at: 368
+
+Cannot allocate: 64 kibibytes
+
+Allocated: 48 kibibytes starting at: 464
+
+Freed block starting at: 80
+
+Freed block starting at: 464
+
+Free List
+ Index   Start  Length
+[0000]      80      64
+[0001]     464      48
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      48
+[0002]     144      96
+[0003]     240     128
+[0004]     368      96
+
+Allocated: 40 kibibytes starting at: 464
+
+Free List
+ Index   Start  Length
+[0000]      80      64
+[0001]     504       8
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      48
+[0002]     144      96
+[0003]     240     128
+[0004]     368      96
+[0005]     464      40
+
+Allocated: 9 kibibytes starting at: 80
+
+Free List
+ Index   Start  Length
+[0000]      89      55
+[0001]     504       8
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      48
+[0002]      80       9
+[0003]     144      96
+[0004]     240     128
+[0005]     368      96
+[0006]     464      40
+

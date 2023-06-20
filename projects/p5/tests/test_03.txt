@@ -1,0 +1,6 @@
+# Next Fit
+# Tests giving away all of memory and then taking it back.
+a 512
+p
+f 0
+p

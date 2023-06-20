@@ -1,0 +1,27 @@
+Next Fit Starting index: 0 Start: 0 Length: 512
+Next Fit Ending index: 0 Start: 128 Length: 384
+Allocated: 128 kibibytes starting at: 0
+
+Next Fit Starting index: 0 Start: 128 Length: 384
+Next Fit Ending index: 0 Start: 256 Length: 256
+Allocated: 128 kibibytes starting at: 128
+
+Next Fit Starting index: 0 Start: 256 Length: 256
+Next Fit Ending index: 0 Start: 384 Length: 128
+Allocated: 128 kibibytes starting at: 256
+
+Next Fit Starting index: 0 Start: 384 Length: 128
+Next Fit Ending index: 0 Free List is Empty
+Allocated: 128 kibibytes starting at: 384
+
+Free List is empty
+
+Allocated List
+ Index   Start  Length
+[0000]       0     128
+[0001]     128     128
+[0002]     256     128
+[0003]     384     128
+
+Cannot free a block starting at: 600
+

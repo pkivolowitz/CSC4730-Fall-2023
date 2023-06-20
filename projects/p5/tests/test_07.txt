@@ -1,0 +1,11 @@
+# Next Fit
+# Tests something
+a 16
+a 16
+a 16
+a 16
+p
+f 16
+p
+a 16
+p

@@ -1,0 +1,11 @@
+# Next Fit
+# Tests allocation too big for hole
+a 16
+a 16
+a 16
+a 16
+p
+f 16
+p
+a 32
+p

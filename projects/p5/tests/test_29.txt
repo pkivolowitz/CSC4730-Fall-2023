@@ -1,0 +1,20 @@
+# BEST Fit
+# Tests passing over bigger block for smaller one
+a 32	0 to 31
+a 48	31 to 79
+a 64	80 to 143
+a 96	144 to 239
+a 128	240 to 367
+a 96
+a 64
+a 48
+f 80	this leaves a length 64 free block
+f 464	this leaves a length 48 free block
+p
+a 40	this should come from the second free block
+# 		because 40 fits 48 better than 64
+p
+a 9		this should come from the block at 80
+#		because the 9 exceeds the 8 left by the
+#		previous allocation.
+p

@@ -1,0 +1,10 @@
+# Best Fit
+# Test Free From Beginning - No Coalesce
+a 128
+a 128
+a 128
+a 128
+p
+f 0
+p
+

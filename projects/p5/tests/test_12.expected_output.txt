@@ -1,0 +1,174 @@
+Next Fit Starting index: 0 Start: 0 Length: 512
+Next Fit Ending index: 0 Start: 32 Length: 480
+Allocated: 32 kibibytes starting at: 0
+
+Next Fit Starting index: 0 Start: 32 Length: 480
+Next Fit Ending index: 0 Start: 64 Length: 448
+Allocated: 32 kibibytes starting at: 32
+
+Next Fit Starting index: 0 Start: 64 Length: 448
+Next Fit Ending index: 0 Start: 96 Length: 416
+Allocated: 32 kibibytes starting at: 64
+
+Next Fit Starting index: 0 Start: 96 Length: 416
+Next Fit Ending index: 0 Start: 128 Length: 384
+Allocated: 32 kibibytes starting at: 96
+
+Freed block starting at: 32
+
+Free List
+ Index   Start  Length
+[0000]      32      32
+[0001]     128     384
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      64      32
+[0002]      96      32
+
+Next Fit Starting index: 0 Start: 32 Length: 32
+Next Fit index advanced to: 1
+Next Fit Ending index: 1 Start: 480 Length: 32
+Allocated: 352 kibibytes starting at: 128
+
+Free List
+ Index   Start  Length
+[0000]      32      32
+[0001]     480      32
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      64      32
+[0002]      96      32
+[0003]     128     352
+
+Next Fit Starting index: 1 Start: 480 Length: 32
+Next Fit Ending index: 1 Start: 496 Length: 16
+Allocated: 16 kibibytes starting at: 480
+
+Free List
+ Index   Start  Length
+[0000]      32      32
+[0001]     496      16
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      64      32
+[0002]      96      32
+[0003]     128     352
+[0004]     480      16
+
+Next Fit Starting index: 1 Start: 496 Length: 16
+Next Fit index advanced to: 2
+Next Fit index advanced to: 1
+Next Fit Ending index: 1 Start: 496 Length: 16
+Cannot allocate: 48 kibibytes
+
+Free List
+ Index   Start  Length
+[0000]      32      32
+[0001]     496      16
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      64      32
+[0002]      96      32
+[0003]     128     352
+[0004]     480      16
+
+Next Fit Starting index: 1 Start: 496 Length: 16
+Next Fit index advanced to: 2
+Next Fit Ending index: 0 Start: 496 Length: 16
+Allocated: 32 kibibytes starting at: 32
+
+Free List
+ Index   Start  Length
+[0000]     496      16
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      32
+[0002]      64      32
+[0003]      96      32
+[0004]     128     352
+[0005]     480      16
+
+Next Fit Starting index: 0 Start: 496 Length: 16
+Next Fit Ending index: 0 Free List is Empty
+Allocated: 16 kibibytes starting at: 496
+
+Free List is empty
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      32
+[0002]      64      32
+[0003]      96      32
+[0004]     128     352
+[0005]     480      16
+[0006]     496      16
+
+Freed block starting at: 128
+
+Free List
+ Index   Start  Length
+[0000]     128     352
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      32
+[0002]      64      32
+[0003]      96      32
+[0004]     480      16
+[0005]     496      16
+
+Coalesce at: 128 adding 16
+Freed block starting at: 480
+
+Free List
+ Index   Start  Length
+[0000]     128     368
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      32
+[0002]      64      32
+[0003]      96      32
+[0004]     496      16
+
+Freed block starting at: 64
+
+Free List
+ Index   Start  Length
+[0000]      64      32
+[0001]     128     368
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      32
+[0002]      96      32
+[0003]     496      16
+
+Coalesce at: 64 adding 32
+Coalesce at: 64 adding 368
+Freed block starting at: 96
+
+Free List
+ Index   Start  Length
+[0000]      64     432
+
+Allocated List
+ Index   Start  Length
+[0000]       0      32
+[0001]      32      32
+[0002]     496      16
+

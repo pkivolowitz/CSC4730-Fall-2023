@@ -1,0 +1,10 @@
+Next Fit Starting index: 0 Start: 0 Length: 512
+Next Fit Ending index: 0 Free List is Empty
+Allocated: 512 kibibytes starting at: 0
+
+Free List is empty
+
+Allocated List
+ Index   Start  Length
+[0000]       0     512
+

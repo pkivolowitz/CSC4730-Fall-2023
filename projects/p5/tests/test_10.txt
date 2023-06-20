@@ -1,0 +1,11 @@
+# Next Fit
+# Test the NEXT fit behavior
+a 32	0   to    31
+a 32    32  to    63
+a 32    64  to    95
+a 32    96  to   127
+f 32
+p
+a 64    128 to  191 this should cause next index to increment
+a 32    192 to  223 this should NOT allocate at 32
+p

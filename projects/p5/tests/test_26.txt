@@ -1,0 +1,10 @@
+# Best Fit
+# Test Free With Coalesce Forwards
+a 128
+a 128
+a 128
+a 128
+p
+f 0
+f 128
+p

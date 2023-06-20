@@ -1,0 +1,19 @@
+Allocated: 128 kibibytes starting at: 0
+
+Allocated: 128 kibibytes starting at: 128
+
+Allocated: 128 kibibytes starting at: 256
+
+Allocated: 128 kibibytes starting at: 384
+
+Free List is empty
+
+Allocated List
+ Index   Start  Length
+[0000]       0     128
+[0001]     128     128
+[0002]     256     128
+[0003]     384     128
+
+Cannot free a block starting at: 600
+

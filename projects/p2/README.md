@@ -1,4 +1,4 @@
-# # CSC 4730 Fall 2023 Project 2
+# CSC 4730 Fall 2023 Project 2
 
 A RISC-V xv6 project to add a system call.
 

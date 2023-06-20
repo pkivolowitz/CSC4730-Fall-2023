@@ -1,0 +1,3 @@
+# Next Fit
+# Tests proper initialization.
+p

@@ -1,0 +1,8 @@
+# Next Fit
+# Tests bad free
+a 128
+a 128
+a 128
+a 128
+p
+f 600

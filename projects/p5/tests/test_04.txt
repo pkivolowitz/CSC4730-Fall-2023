@@ -1,0 +1,12 @@
+# Next Fit
+# Tests coalescing
+a 16
+a 16
+a 16
+a 16
+p
+f 48
+f 32
+f 16
+f 0
+p
