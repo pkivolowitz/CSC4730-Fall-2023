@@ -47,6 +47,13 @@ debugging and commenting.
 | ---- | ----- | ---- |
 | TR | 2:20 PM to 4:00 PM | CC 114 |
 
+### In the event of virtual classes
+
+Should we meet via Zoom, all cameras must be on to the maximum degree possible.
+If you are on a desktop, get a Webcam, they are cheap enough.
+
+The link given below will be used for classes, should that be needed.
+
 ## Office hours
 
 All office hours are held via [ZOOM](
