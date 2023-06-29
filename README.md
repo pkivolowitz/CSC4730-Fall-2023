@@ -202,7 +202,7 @@ it.
 
 You get 6 free absences. After that each absence will remove 1 percent
 from your aggregate score at the end of the term. All absences are
-treated equally. That is, there are no "excused" absences. 
+treated equally. That is, there are no "excused" absences.
 
 The number of free absences equates to three weeks of missed class time
 so it is unlikely you'll exceed this and incur a penalty.
