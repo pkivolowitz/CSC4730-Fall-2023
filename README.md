@@ -1,9 +1,12 @@
 # CSC4730-Fall-2023
 
+This document serves as both the course's syllabus and its main web
+page.
+
 ## Course Summary
 
 In this course you will not only open the curtain to see the wizard, you
-will strip the wizard revealing their deepest secrets.
+will strip the wizard bare, revealing their deepest secrets.
 
 The biggest parts of this course:
 
@@ -12,7 +15,7 @@ Systems in Three Easy Pieces. This book is written at a popular level
 and is very accessible.
 
 * We will leverage the Unix programming environment in a deep and
-meaningful way. You will learn very marketable skills.
+meaningful way. These are marketable skills.
 
 * We will do up to 8 projects both inside an OS itself and in userland.
 
@@ -49,8 +52,9 @@ debugging and commenting.
 
 ### In the event of virtual classes
 
-Should we meet via Zoom, all cameras must be on to the maximum degree possible.
-If you are on a desktop, get a Webcam, they are cheap enough.
+Should we meet via Zoom. **All cameras must be on to the maximum degree
+possible.** If you are on a desktop, get a Webcam, they are cheap
+enough. Not having a Webcam is not an allowable excuse.
 
 The link given below will be used for classes, should that be needed.
 
@@ -66,6 +70,22 @@ This link will remain valid all term.
 | T | 11 AM to 12 PM |
 | R | 7 PM to 9 PM |
 | F | 12 PM to 1 PM |
+
+Office hours may be recorded if the content is deemed by me to be of
+general use to the class.
+
+### Meetings / Questions outside of office hours
+
+Due to abuse of the instructor's time during Spring 2023, help shall be
+largely limited to the above hours. Make sure you ask your questions
+during class or during posted office hours.
+
+### Meetings / Questions prior to project due dates
+
+With some exceptions, to be decided by me, help on projects will not be
+available within 24 hours of a project's due date. This prohibition is
+imposed to encourage good working habits including but not limited to
+starting work early / working steadily. This is not intended punitively.
 
 ## Texts
 
@@ -96,7 +116,10 @@ general idea of that they contain. Then, later in the course, when you
 have a question, review the ancillary texts for details.
 
 You expected to have consulted the texts before approaching me with
-questions.
+questions. If I should answer something to the effect that the answer is
+in the book, you are expected to explain to me what you read and
+articulate when about what you read is unclear. This step is take to
+encourage good working habits on your part and is not punitive.
 
 ### Topics Covered
 
@@ -106,7 +129,7 @@ The following are the topics which we can expect to be covered:
 | ----- | ----- | ----- | ----- |
 |  4 | Processes | 21 | Swapping Mechanisms |
 |  5 | Process API | 22 | Swapping Policies |
-|  6 | Direct Execution | 23 | Complete VM System |
+|  6 | Limited Direct Execution | 23 | Complete VM System |
 |  7 | CPU Scheduling | 26 | Concurrency and Threads |
 |  8 | Multi-level Feedback | 27 | Thread API |
 |  9 | Lottery Scheduling | 28 | Locks |
@@ -152,6 +175,9 @@ apt upgrade
 apt install build-essential gdb
 ```
 
+By now you will likely have already installed the plugins in VS Code
+needed to work inside WSL. If not, ask a friend.
+
 On the Mac, ensure you have `gcc` and `g++` available to you on the
 command line.
 
@@ -192,7 +218,11 @@ or
 
 `man 2 chdir`
 
-Consult the man pages before approaching me with questions.
+Consult the man pages before approaching me with questions. Prior to my
+answering a question whose answer is found in the man page, I will
+require you to state your understanding of the man page and articulate
+where your understanding is insufficient. This step is taken to
+encourage good working habits and is not punitive.
 
 ## Attendance
 
@@ -331,3 +361,28 @@ The decision of the instructor is final.
 
 See [here](./pptx/) for some very old slides I made describing a few
 topics in very succinct terms.
+
+## General statement about "help"
+
+Apart from lecture, I will not "just give you the answer." Rather, you
+must demonstrate that you have exhausted any means available to you to
+learn on your own. This is not punitive. This will be a requirement for
+your future. You'll get in the habit now. This may be a lasting and
+meaningful "gift" to you from me.
+
+### Jishnu Mukerjee, Senior Systems Architect at Hewlett-Packard
+
+When I was an undergraduate, Jishnu Mukerjee was the graduate student
+who was in charge our department's
+[PDP-11/60](<https://en.wikipedia.org/wiki/PDP-11>). It ran an early
+version of Unix, V6 to be exact... sound familiar?
+
+The first time I had a question, I asked Jishnu and he answered it.
+
+The second time I had a question, I asked Jishnu and he answered it.
+
+The third time I had a question, I asked Jishnu and he handed me a print
+out of the entire OS. He said, "All your answers are in here."
+
+It was the greatest gift he could possibly give and I am thankful to him
+to this day.
