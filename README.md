@@ -118,8 +118,8 @@ have a question, review the ancillary texts for details.
 You expected to have consulted the texts before approaching me with
 questions. If I should answer something to the effect that the answer is
 in the book, you are expected to explain to me what you read and
-articulate when about what you read is unclear. This step is take to
-encourage good working habits on your part and is not punitive.
+articulate what you found unclear. This step is take to encourage good
+working habits on your part and is not punitive.
 
 ### Topics Covered
 
@@ -152,6 +152,8 @@ chapters are short and the text is written at a popular level.
 ### Environment
 
 All projects require use of WSL on Windows or the terminal on the Mac.
+If you're passionate about using Linux directly, this is also an option
+but no help will be provided.
 
 The easiest way to install WSL (Ubuntu) on Windows 11 is to run a
 command prompt as Administrator and then:
@@ -201,9 +203,9 @@ On Mac:
 
 Ensure you have the latest `brew`.
 
-You'll also need the riscv toolchain.
+You'll also need the riscv toolchain plus qemu.
 
-`brew install riscv-gnu-toolchain`
+`brew install qemu riscv-gnu-toolchain`
 
 And as per Windows, get the xv6 repo. It is likely there is a small
 change to be made to the `makefile`.
@@ -255,18 +257,18 @@ No, your coach cannot force you to leave class early to make practice.
 [Here](./therac.md) is a link to an essay assignment. You can look at
 it at your convenience but do it only when assigned. The essay is six
 percent of your grade and, at 500 words, is one third to one sixth the
-length of a typical college essay. This is six percent of your grade.
+length of a typical college essay. Five hundred words about life, death
+and your responsibility as a coder is not too much to ask.
 
 ## Projects
 
-Below is a listing of 10 projects of which only 8 are truly projects.
+Below is a listing of 10 "projects" of which only 8 are truly projects.
 One is a tutorial and another is just to provide proof you're ready to
 tackle the two kernel projects.
 
 The *Weight* column provides a weighting of the project within the
 Project Grading Component. It suggests my anticipation of the relative
-difficulty of each project compared to the others. It also defines the
-weight given to your score within the projects grading category.
+difficulty of each project compared to the others.
 
 The *OSTEP* column indicates how the projects correspond to course
 material. The indicated chapters will be most helpful.
