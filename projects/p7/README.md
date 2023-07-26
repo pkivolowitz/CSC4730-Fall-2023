@@ -78,16 +78,19 @@ to:
 * Launching the child which accesses the above.
 
 * Entering a loop in the parent which pumps data into the pipe as fast
-as it can.
+  as it can.
 
 * Entering a loop in the child which **slowly** reads from the pipe.
 
-* when a `SIGINT` is received, it sends a `SIGINT` to the child and
-  both programs shut down gracefully
+* when a `SIGINT` (^C) is received by the parent, it sends a `SIGINT` to
+  the child and both programs shut down gracefully
 
 ### Includes
 
-Be prepared to include a great many header files.
+Be prepared to include a great many header files. You are specifically
+*not* being told which includes to use because no one will give you this
+information in the real world. You must learn to figure these things out
+on your own.
 
 ### Suggested steps
 
@@ -102,7 +105,8 @@ can then be leveraged by both the parent and the child.
 
 * You'll need to initialize it properly.
 
-* You'll need to call `sigaction()`.
+* You'll need to call `sigaction()`. Notice that the name of the
+  `struct` is the same as the name of the function.
 
 Then write a handler for the signal:
 
@@ -115,7 +119,7 @@ void my_handler(int s)
 ```
 
 When the signal (in this case caused by ^C) is received, the
-`keep_going` flag turns false which will cause the main loop to
+`keep_going` flag turns false which should cause your main loop to
 terminate.
 
 #### Step 2 - shared memory and pipe initialization
@@ -128,17 +132,7 @@ Here is the class I created, you can choose something different:
 
 ```c++
 #pragma once
-#include <mutex>
-#include <assert.h>
-#include <ctime>
-#include <errno.h>
-#include <fcntl.h>
-#include <semaphore.h>
-#include <signal.h>
-#include <stdio.h>
-#include <string>
-#include <sys/mman.h>
-#include <sys/stat.h>
+/* Many includes go here */
 
 #define SHMEM_NAME  "p7"
 
@@ -174,18 +168,18 @@ In my implementation:
 
 * `UnMap()` as the name implies, is like `free()`.
 
-
 Apple does not support pthreads' own semaphores for reasons that are
-unknown. Instead you must use named semaphores via `sem_open()` and
-`sem_closed()`. Initializing these and taking them down is the job
-of the parent. The child just needs to open and close them.
+known only to them. Instead you must use named semaphores via
+`sem_open()` and `sem_closed()`. Initializing these and taking them down
+is the job of the parent. The child just needs to open, use and close
+them.
 
 ## **WARNING WARNING WARNING**
 
-The named semaphores and named shared memory regions are managed by the
-kernel. If you do not initialize them correct and especially do not
-clean them up correctly, **you will have to reboot your machine (Mac) or
-restart WSL (Windows).**
+**The named semaphores and named shared memory regions are managed by
+the kernel. If you do not initialize them correct and especially do
+not clean them up correctly, you will have to reboot your machine
+(Mac) or restart WSL (Windows).**
 
 In developing this project, I myself had to reboot my Mac about a dozen
 times and I had a clue about what I was doing.
@@ -196,9 +190,9 @@ You must use WSL on Windows or the Terminal on the Mac.
 
 ## Provided makefile
 
-If you create main source code files named parent.cpp and child.cpp,
-you could be able to leverage the included makefile. Then it is
-easy to build your programs like so:
+If you create main source code files named parent.cpp and child.cpp, you
+could be able to leverage the included makefile. Then it is easy to
+build your programs like so:
 
 ```text
 $ make all
@@ -213,7 +207,7 @@ file to ensure you have done this correctly. Hand in the zip file.
 
 ## Partners
 
-* You must use only the partner I assign you.
+* You must use only the partner I assign to you.
 
 * Only 1 person should hand in code. The code should clearly state who
   the partners are in a new text file `partner.txt` in the main
@@ -222,8 +216,19 @@ file to ensure you have done this correctly. Hand in the zip file.
 * The non-code-submitting partner must submit a text file “partner.txt”
   that states who the partners are.
 
-* Failure to list partners correctly as described above removes 5 points
-  from your grade.
+* **Failure to list partners correctly as described above removes 5
+  points from your grade.**
+  
+  "Stupid Professor, this seems like a stupid and unnecessary
+  requirement that I will ignore." Someday you will join a team. The
+  team may have requirements that seem stupid to you. Violation of the
+  requirement can result in a poor performance review. 
+  
+  No raise for you.
+  
+  Or, "They're (i.e. you are) just not fitting into our team culture." 
+  
+  No job for you.
 
 ## Grading
 
@@ -237,18 +242,19 @@ Both partners get the same grade without exception.
 The parent:
 
 * Does not use a random sleep period - it emits data into the pipe as
-quickly as it can. Correct implementation of the named pipe will cause
-the parent to sleep when the pipe is full and be reawakened when there
-is room in the pipe.
+  quickly as it can. Correct implementation of the named pipe will cause
+  the parent to sleep when the pipe is full and be reawakened when there
+  is room in the pipe. It will have no knowledge of when or often this
+  happens.
 
 * Is responsible for truncating the shared memory region. The child does
-not truncate.
+  not truncate.
 
 * as part of exiting, sends a `SIGINT` to the child using the system
-call `kill`.
+  call `kill`.
 
 * sends the string: "Line: 554 ABCDEFGHIJKLMNOPQRSTUVWXYZ\n" where the
-554 is from a counter of lines written to the pipe.
+  554 is from a counter of lines written to the pipe.
 
 * prints "p_index: 38 Parent wrote: Line: 554
   ABCDEFGHIJKLMNOPQRSTUVWXYZ\n"
@@ -295,11 +301,11 @@ The functions you must use include:
 
 If all is done correctly, you will not need `semctl()`.
 
-Remember that permissions are set in **OCTAL**. If you don't know how to
-specify an octal constant, look it up.
+I have deleted a hint about permissions - getting them completely wrong
+will result in a deduction.
 
-Messing up named semaphores will require rebooting your system since
-these are persistent OS managed resources.
+**Messing up named semaphores will require rebooting your system since
+these are persistent OS managed resources.**
 
 ## Comments about the Shared Memory
 
@@ -326,7 +332,9 @@ In my implementation the named semaphores also live in shared memory.
 * The size of the pipe must be 1024 bytes. That is, the most number of
   bytes the pipe can contain at one time is 1024.
 
-* The canary must have the value 5077604.
+* The canary must have the value 5077604. Why? Because your manager
+  said so. Following specifications is an important skill for your
+  future.
 
 ## Output
 
@@ -429,7 +437,7 @@ Thereafter, there was a close synchronization between parent and child.
 
 ## Interrupted system calls
 
-Many signals can interrupt system calls. Look through the sample above.
+Signals can interrupt system calls. Look through the sample above.
 
 Notice:
 
