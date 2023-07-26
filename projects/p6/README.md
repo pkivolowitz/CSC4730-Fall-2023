@@ -47,9 +47,9 @@ You cannot:
 
 We are going to use pthreads threads and synchronization primitives.
 
-You need a mutex for implementing the semaphore and another one
-which you must use to ensure no thread's output stomps over
-another thread's output.
+You need a mutex for implementing the semaphore and another one which
+you must use to ensure no thread's output stomps over another thread's
+output.
 
 ## Command Line Options
 
@@ -64,8 +64,8 @@ be less than 1 or more than 32.
 be less than 1 nor more than the number of players.
 
 You must handle each of the above and do appropriate error checking
-Should any errors be found you must print some reasonable error
-messages and quit.
+Should any errors be found you must print some reasonable error messages
+and quit.
 
 ## Data Structures
 
@@ -82,9 +82,8 @@ These two data structures form the basis of the program's output.
 
 ## Discussion
 
-The semaphore must be programmed to allow the number of hot
-potatos specified by the user on the command line to be active
-at any one time.
+The semaphore must be programmed to allow the number of hot potatos
+specified by the user on the command line to be active at any one time.
 
 ### Semaphore Functions
 
@@ -98,8 +97,8 @@ int32_t SemWait(Sem & s);
 
 ### Output During Set Up
 
-You must print status information prior to releasing the
-potatos. For example:
+You must print status information prior to releasing the potatos. For
+example:
 
 ```text
 Number of children: 4
@@ -111,7 +110,8 @@ Child:  3 has started
 Hit return to put potatos in play: 
 ```
 
-Notice that execution is paused until you hit return.
+Notice that execution is paused by waiting for the keyboard until you
+hit return.
 
 ### Sleeping
 
@@ -133,16 +133,29 @@ Restated, you must have some randomness in your solution but you cannot
 use `srand()` or `rand()` or its cousins. Instead, you must use the C++
 `random`.
 
+### What's so bad about `rand()`
+
+As stated above, `rand()` is not thread-safe. It maintains an internal
+state which is a **shared resource**. The state is **not protected**.
+Therefore, use by multiple threads can cause inconsistent results. So
+what, you say. It's all random anyway isn't it?
+
+No. `rand()` can be used to generate repeatable sequences of seemingly
+random numbers. Using it in a threaded program introduces race
+conditions, the results of which cannot be expected to be repeatable.
+
 ### Infinite Loops
 
 The players and the main loop should be infinite loops. Terminate
-the application by ^c.
+the application by ^C.
 
 ### ^s / ^q
 
-Control-s suspends terminal output. Control-q starts it again.
-This can be used as a "pause" button while your program is
-running. Use this to count asterisks.
+Control-s suspends terminal output. Control-q starts it again. This can
+be used as a "pause" button while your program is running. Use this to
+count asterisks.
+
+These terminal sequences descend from the earliest of I/O devices.
 
 ### Building Your Program
 
@@ -157,12 +170,11 @@ isn't needed but it doesn't hurt. On Linux, it is necessary.
 
 ### Setting Expectations
 
-My implementation, without many comments, but with blank lines
-and all self-contained is 168 lines. This is not a challenge.
-Rather it is to set your expectations. If you, for example,
-find yourself writing double this number of lines, you should
-ask yourself if you aren't either mistaken or are working too
-hard.
+My implementation, without many comments, but with blank lines and all
+self-contained is 168 lines. This is not a challenge. Rather it is to
+set your expectations. If you, for example, find yourself writing double
+this number of lines, you should ask yourself if you aren't either
+mistaken or are working too hard.
 
 ## Output
 
