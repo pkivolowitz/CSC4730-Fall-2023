@@ -285,7 +285,7 @@ The projects together contribute 92 percent of your final grade.
 | 4 | [Guard Page](./projects/p4/) | Kernel  |  60     | 13         | N/A |
 | 5 | [Allocators](./projects/p5) | User   |  70     | 17         | 7   |
 | 6 | [Semaphores](./projects/p6/) | User  |  70     | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
-| 7 | [Cumulative Project](./projects/p7) | User   |  100 | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
+| 7 | [Named Pipe](./projects/p7) | User   |  100 | 26, 27, 28, 29, 30, 31 | 8, 11, 12 |
 | 8 | [FSCK](./projects/p8) | User   | 100 | 39, 40, 42 | 3, 4, 5 |
 
 ### Project Partners
