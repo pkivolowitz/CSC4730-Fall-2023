@@ -253,11 +253,11 @@ The parent:
 * as part of exiting, sends a `SIGINT` to the child using the system
   call `kill`.
 
-* sends the string: "Line: 554 ABCDEFGHIJKLMNOPQRSTUVWXYZ\n" where the
+* sends the string: "Line: 554 ABCDEFGHIJKLMNOPQRSTUVWXYZ\\n" where the
   554 is from a counter of lines written to the pipe.
 
 * prints "p_index: 38 Parent wrote: Line: 554
-  ABCDEFGHIJKLMNOPQRSTUVWXYZ\n"
+  ABCDEFGHIJKLMNOPQRSTUVWXYZ\\n"
 
   * `p_index:` followed by a number tells you where the head pointer
   is in the circular buffer. This number should never equal the size
