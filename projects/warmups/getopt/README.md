@@ -36,10 +36,14 @@ You are to take a screenshot of you building and executing the provided program 
 
 | Option | Argument | Action |
 | ------ | -------- | ------ |
-| U | string | print the string |
-| n | integer | print the integer squared |
+| U | string | prints the string |
+| n | integer | prints the integer squared |
 
-Your screenshot should show the above two options in use.
+Your screenshot should show the above two options in use. 
+
+And, it should show a
+second invocation demonstrating the `-h` option to include help for the two new
+options.
 
 You can make use of the provided `makefile` to build the
 program.
