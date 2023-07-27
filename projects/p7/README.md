@@ -222,11 +222,11 @@ file to ensure you have done this correctly. Hand in the zip file.
   "Stupid Professor, this seems like a stupid and unnecessary
   requirement that I will ignore." Someday you will join a team. The
   team may have requirements that seem stupid to you. Violation of the
-  requirement can result in a poor performance review. 
+  requirement can result in a poor performance review.
   
   No raise for you.
   
-  Or, "They're (i.e. you are) just not fitting into our team culture." 
+  Or, "They're (i.e. you are) just not fitting into our team culture."
   
   No job for you.
 

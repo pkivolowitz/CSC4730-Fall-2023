@@ -162,7 +162,7 @@ These terminal sequences descend from the earliest of I/O devices.
 [Here](./makefile) is a good `makefile` which will build a single
 executable out of whatever .cpp files are in the directory while also
 building a dependency chain (so that should any .h or .hpp files be
-modified, the right files will be rebuilt). 
+modified, the right files will be rebuilt).
 
 There is also a `clean` target to clean up the directory. The
 application will be built with `pthread` linked in. On the Mac this
@@ -193,7 +193,7 @@ Notice there are 8 numbers before the word "variance". These numbers
 indicated the number of times each thread has held a potato in the past.
 
 Notice four numbers are preceded by "\*". These are the players who are
-in possession of a potato *right now*. 
+in possession of a potato *right now*.
 
 **NOTE** that the numbers of "\*" **might be less** than the number of
 hot potatos but **will NEVER** be more. If you see more "\*" than the
