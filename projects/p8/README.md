@@ -256,8 +256,9 @@ Should be as specific as possible listing block or inode numbers.
 
 ## What to Hand In
 
-Execute a `make clean`. Then zip the entire xv6 folder. Test the zip
-file to ensure you have done this correctly. Hand in the zip file.
+Execute a `make clean`. Then zip all source code including your
+makefile. Test the zip file to ensure you have done this correctly. Hand
+in the zip file.
 
 ## Partners
 
