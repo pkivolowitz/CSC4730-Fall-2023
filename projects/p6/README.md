@@ -217,14 +217,27 @@ zip file contains a subfolder, I will remove 5 points.
 
 * You must use only the partner I assign you.
 
-* Only 1 person should hand in code. The code should clearly state who the partners are in a comment at the top of the main source file.
+* Only 1 person should hand in code. The code should clearly state who
+  the partners are in a comment at the top of the main source file.
 
-* The non-code-submitting partner must submit a text file “partner.txt” that states who the partners are.
+* The non-code-submitting partner must submit a text file “partner.txt”
+  that states who the partners are.
 
-* Failure to list partners correctly as described above removes 5 points from your grade.
+* Failure to list partners correctly as described above removes 5 points
+  from your grade.
+
+## Software Kills
+
+In your dream job at a video game maker, you are assisting in adding
+multithreading support to a previously CPU bound shooter. You goof. A
+player becomes so upset with an uncalled-for death in a Battle Royale
+that they hang themselves. The player's mom finds him. She is devastated
+and cannot recover. She kills herself three years later but not before
+winning a lawsuit against your employer that puts them out of business.
 
 ## Grading
 
-The class will receive a rubric when grading is complete that describes errors and penalties.
+The class will receive a rubric when grading is complete that describes
+errors and penalties.
 
 Both partners get the same grade without exception.

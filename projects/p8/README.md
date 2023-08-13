@@ -288,6 +288,10 @@ in the zip file.
   
   No job for you.
 
+## Software Kills
+
+See above in the Overview.
+
 ## Grading
 
 The class will receive a rubric when grading is complete that describes

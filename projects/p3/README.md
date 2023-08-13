@@ -55,6 +55,12 @@ Zip your source code files together and submit that.
 * Failure to list partners correctly as described above removes 5 points
   from your grade.
 
+## Software Kills
+
+You goofed when you tweaked the scheduler of the system running a
+nuclear power plant. It starves a crucial monitoring task. The reactor
+melts down. Millions die.
+
 ## Grading
 
 The class will receive a rubric when grading is complete that describes

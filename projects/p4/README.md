@@ -125,6 +125,14 @@ file to ensure you have done this correctly. Hand in the zip file.
 * Failure to list partners correctly as described above removes 5 points
   from your grade.
 
+## Software Kills
+
+You goofed when adding this critical error detection feature and the
+system you are working on, traffic light control, doesn't catch a bug
+written by another programmer. A Dad driving home his wife and newborn
+triplets is tee boned by a semi that passes what should have been a red
+light. Mom and the newborns are crushed. Explain your error to Dad.
+
 ## Grading
 
 The class will receive a rubric when grading is complete that describes

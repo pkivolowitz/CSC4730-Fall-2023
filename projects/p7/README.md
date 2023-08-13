@@ -230,6 +230,15 @@ file to ensure you have done this correctly. Hand in the zip file.
   
   No job for you.
 
+## Software Kills
+
+You goof adding named pipes to your company's product, a police dispatch
+communications system. Your bug let's data be lost. The data is from the
+digital voice communications system. Unfortunately, the particular data
+lost is the dispatcher's warning that the person being served with a
+warrant is heavily armed. Seven police officers including one K9 are
+ambushed and suffer serious and mortal wounds. But you "Back the Blue."
+
 ## Grading
 
 The class will receive a rubric when grading is complete that describes

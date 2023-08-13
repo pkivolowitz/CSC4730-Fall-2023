@@ -1,6 +1,7 @@
 # CSC 4730 Fall 2023 Project 5
 
-In this project you will write programs that implement three free space allocator algorithms.
+In this project you will write programs that implement three free space
+allocator algorithms.
 
 ## Objectives
 
@@ -128,7 +129,8 @@ code of 1.
    the error, you must note this using the text given below. Then
    your program must exit with a return code of 1.
 
-[Here](./slab_output.txt) is the output you must produce LETTER FOR LETTER... it is long.
+[Here](./slab_output.txt) is the output you must produce LETTER FOR
+LETTER... it is long.
 
 Line 1 says:
 
@@ -480,14 +482,28 @@ zip file contains a subfolder, I will remove 5 points.
 
 * You must use only the partner I assign you.
 
-* Only 1 person should hand in code. The code should clearly state who the partners are in a comment at the top of the main source file.
+* Only 1 person should hand in code. The code should clearly state who
+  the partners are in a comment at the top of the main source file.
 
-* The non-code-submitting partner must submit a text file “partner.txt” that states who the partners are.
+* The non-code-submitting partner must submit a text file “partner.txt”
+  that states who the partners are.
 
-* Failure to list partners correctly as described above removes 5 points from your grade.
+* Failure to list partners correctly as described above removes 5 points
+  from your grade.
+
+## Software Kills
+
+You hoped to increase the efficiency of a web server by writing a new
+allocator but you goofed. The web server provides access to drug records
+to a national drug store chain. As a result of your little mistake, it
+allows a pharmacist to dispense a new liver pill to grandma that
+conflicts with her kidney pill. Grandma dies a painful death just a week
+shy of her first granddaughter's wedding. They keep an empty space in
+the front row of the chapel.  
 
 ## Grading
 
-The class will receive a rubric when grading is complete that describes errors and penalties.
+The class will receive a rubric when grading is complete that describes
+errors and penalties.
 
 Both partners get the same grade without exception.

@@ -372,14 +372,28 @@ zip file contains a subfolder, I will remove 5 points.
 
 * You must use only the partner I assign you.
 
-* Only 1 person should hand in code. The code should clearly state who the partners are in a comment at the top of the main source file.
+* Only 1 person should hand in code. The code should clearly state who
+  the partners are in a comment at the top of the main source file.
 
-* The non-code-submitting partner must submit a text file “partner.txt” that states who the partners are.
+* The non-code-submitting partner must submit a text file “partner.txt”
+  that states who the partners are.
 
-* Failure to list partners correctly as described above removes 5 points from your grade.
+* Failure to list partners correctly as described above removes 5 points
+  from your grade.
+
+## Software Kills
+
+So you forgot one step. So what? Suppose your implementation sits in a
+chain storing or processing log information. There's something of vital
+importance to the automated driving system you're working on that some
+other programmer screwed up. But nobody notices because log entries that
+would have told engineers what went wrong wasn't written. People die in
+wreck after wreck. You didn't write the code that caused the fault that
+caused the deaths, but you're responsible for dead people non-the-less.
 
 ## Grading
 
-The class will receive a rubric when grading is complete that describes errors and penalties.
+The class will receive a rubric when grading is complete that describes
+errors and penalties.
 
 Both partners get the same grade without exception.

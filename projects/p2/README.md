@@ -114,6 +114,14 @@ file to ensure you have done this correctly. Hand in the zip file.
 * Failure to list partners correctly as described above removes 5 points
   from your grade.
 
+## Software Kills
+
+You goofed when adding a system call to the Linux kernel that runs a new
+pace maker. One time out of 100 million calls to your system call causes
+the kernel to crash. Patients die. No one knows why. Somewhere in the
+back of your mind you suspect it might be your system call. It haunts
+you for the rest of your life.
+
 ## Grading
 
 The class will receive a rubric when grading is complete that describes
