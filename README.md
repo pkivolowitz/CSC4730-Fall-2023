@@ -345,6 +345,14 @@ grade.
 There are no exams in this course and projects already include a grace day.
 Therefore, no accommodations ought to be necessary.
 
+## Health and Counseling Center
+
+The Health and Counseling Center (HCC) addresses student physical, mental, and emotional well-being. All services, provided by experienced professionals, are free and confidential to currently enrolled, full-time undergraduate students. Students must call or visit the HCC to schedule an appointment. Health services are available by walk-in or appointment from 8:30am - 3:30pm. Counseling walk-in sessions are available Monday through Friday from 11:30am to 1:00pm, last appointment begins around 12:30pm, first-come first-seen. TWC, first floor(behind mailboxes)| 262-551-5710 | Website | Mon-Fri 8:30am to 1pm and 2pm to 4:00pm.
+
+## Learning Accessibility Services
+
+Carthage College strives to make all learning experiences as accessible as possible. If you anticipate or experience academic barriers due to your disability (including mental health, learning disorders, and chronic medical conditions), please let me know immediately so we can discuss options privately.  To establish reasonable accommodations, you must register with Warren Wolchuk in Learning Accessibility Services [wwolchuk@carthage.edu](wwolchuk@carthage.edu).
+
 ## Academic Honesty
 
 All work will be examined for originality. Should I find evidence of copied
