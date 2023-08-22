@@ -41,18 +41,20 @@ You are to take a screenshot of you building and executing the provided program 
 
 Your screenshot should show:
 
-* your name.
+* your name printed by the program.
 
 * the above two options in use.
 
-* And, it should show a
-second invocation demonstrating the `-h` option to include help for the two new
-options.
+* And, it should show a second invocation demonstrating the `-h` option
+to include help for the two new options.
 
-You can make use of the provided `makefile` to build the
-program.
+You can make use of the provided `makefile` to build the program.
 
 The program must be built in WSL on Windows or in the terminal on the
 Mac.
 
 Submit the screenshot as a `jpg` file to Schoology.
+
+## Work rules
+
+This project is done SOLO. No partners.
