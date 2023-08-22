@@ -39,9 +39,13 @@ You are to take a screenshot of you building and executing the provided program 
 | U | string | prints the string |
 | n | integer | prints the integer squared |
 
-Your screenshot should show the above two options in use. 
+Your screenshot should show:
 
-And, it should show a
+* your name.
+
+* the above two options in use.
+
+* And, it should show a
 second invocation demonstrating the `-h` option to include help for the two new
 options.
 
