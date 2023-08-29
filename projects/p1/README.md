@@ -100,7 +100,8 @@ And:
 $ ls > foo.txt
 ```
 
-Once again, `ls` writes to index 1. It has no idea that index 1 is ultimately fill in data in a file.
+Once again, `ls` writes to index 1. It has no idea that index 1 is
+ultimately fill in data in a file.
 
 Let's consider this line:
 
@@ -122,6 +123,8 @@ use one of these (depending how you choose to code things up).
 
 Let's drill down in the `xv6` source code to see how `dup()` is
 implemented. **You should do this for `fork()` and `exec()`**.
+I have already modelled how to learn other people's code
+[here](../../code/exec.c).
 
 Starting with `sys_dup()` in `sysfile.c` you'll see it calls `argfd()`
 which fetches a file descriptor from user land, vets it, then returns
@@ -143,23 +146,32 @@ with the exception of the return value from `fork()`.
 
 In the child, the return value of `fork()` is 0.
 
-In the parent, the return value of `fork()` is the process ID of the child.
+In the parent, the return value of `fork()` is the process ID of the
+child.
 
 ## `exec()`
 
-The `exec()` *family* of system calls are also special. These calls cause the operating system to locate an executable file on disk, load its contents into memory **OVERLAYING** the memory of the original process. Then, the OS launches the entry point (i.e. `main()`) of the new code.
+The `exec()` *family* of system calls are also special. These calls
+cause the operating system to locate an executable file on disk, load
+its contents into memory **OVERLAYING** the memory of the original
+process. Then, the OS launches the entry point (i.e. `main()`) of the
+new code.
 
 ## Relationship between `fork()` and `exec()`
 
-If P1 forks, you get two P1's. If P1 keeps forking itself, all you'll have are P1's. How do you ever get to run a program other than P1?
+If P1 forks, you get two P1's. If P1 keeps forking itself, all you'll
+have are P1's. How do you ever get to run a program other than P1?
 
 `exec()` works hand-in-hand with `fork()`.
 
 * P1 `forks()`
 * Now there are two P1's
-* The parent P1 knows it is the parent because it gets a positive non-zero return code from `fork()`
-* The child P1 knows it is the child because it gets a zero return code from `fork()`
-* The child P1 potentially does some bookkeeping then calls `exec()` for P2
+* The parent P1 knows it is the parent because it gets a positive
+  non-zero return code from `fork()`
+* The child P1 knows it is the child because it gets a zero return code
+  from `fork()`
+* The child P1 potentially does some bookkeeping then calls `exec()` for
+  P2
 * `exec()`, if it works, does not return - rather P2 begins executing
 
 ## `fork()` and calling `exec()` in this project
@@ -184,9 +196,12 @@ Here is a previous year's lecture on youtube.
 
 ## Required command line options
 
-Command line options can occur in any order. You must implement the following:
+Command line options can occur in any order. You must implement the
+following:
 
-* `-t` followed by a path to a directory - the command or sequence of commands should start in the named directory. It is an error if the directory does not exist or the path does not lead to a directory. `t`
+* `-t` followed by a path to a directory - the command or sequence of
+commands should start in the named directory. It is an error if the
+directory does not exist or the path does not lead to a directory. `t`
 is for `t`emporary directory.
 
 * `-i` followed by a path to a file - this file will be wired into the
@@ -220,7 +235,7 @@ precedence.*
   given, it receives its input from a pipe from the preceding program.
   It is an error if the path does not lead to an executable program.
 
-* `-T` this command line option does not take an argument. It is
+* `-D` this command line option does not take an argument. It is
   optional. If given, it prints the current working directory. See the
   getcwd function.
 
@@ -357,7 +372,8 @@ getopt
 
 * Then, I would implement the `-i` option.
 
-* Next, the `-o` and `-a` options - watch out that you don't blow away something important when testing these options.
+* Next, the `-o` and `-a` options - watch out that you don't blow away
+  something important when testing these options.
 
 * Finally, implement the `-2` option - here is where you will need pipes
   and some more forking around.
