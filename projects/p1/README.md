@@ -190,9 +190,15 @@ Two of the ancient *pptx* slide decks might be helpful here.
 
 * [`two`](../../pptx/Quick%20OS%20-%20Pipes.pptx)
 
+## Helpful videos
+
 Here is a previous year's lecture on youtube.
 
 * [9/8/2020](<https://youtu.be/y4CK0r4bTtw>)
+
+Here is a video specifically on setting up pipes:
+
+* [9/11/2020](<https://youtu.be/B-vCE_o_5WY>)
 
 ## Required command line options
 
