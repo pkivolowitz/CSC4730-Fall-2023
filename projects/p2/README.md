@@ -44,6 +44,10 @@ Let's start by recalling the lessons of "Limited Direct Execution".
   Notice the funny syntax defining `syscalls`. Look this up or ask me
   about it.
 
+This is **not** an exhaustive list of what needs to be looked at or
+modified / added to. Pick a system call like `open()` and trace it
+all the way through paying **special attention to include files**. 
+
 ## Figure out where things must be added
 
 * You must add a user level program to xv6 that will test your new call.
@@ -54,6 +58,8 @@ Let's start by recalling the lessons of "Limited Direct Execution".
 
 * You must implement your system call inside the kernel. What files need
   to change?
+
+Did you pay special attention to include files?
 
 ## Implementation
 
