@@ -201,8 +201,9 @@ On Mac:
 
 Ensure you have the latest `brew`.
 
-You'll also need the riscv toolchain plus qemu. To access the riscv tools
-you need to add the right tap.
+You'll also need the riscv toolchain plus qemu.
+
+To access the riscv tools you need to add the right tap.
 
 `brew tap riscv/riscv`
 
