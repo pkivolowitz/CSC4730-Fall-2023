@@ -201,6 +201,10 @@ On Mac:
 
 Ensure you have the latest `brew`.
 
+If you don't have `brew`, run this:
+
+`/bin/bash -c "$(curl -fsSL <https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh>)"`
+
 You'll also need the riscv toolchain plus qemu.
 
 To access the riscv tools you need to add the right tap.
