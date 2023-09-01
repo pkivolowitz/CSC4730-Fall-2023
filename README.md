@@ -215,6 +215,13 @@ And as per Windows, get the xv6 repo. It is likely there is a small
 change to be made to the `makefile` to specify the appropriate tool
 chain.
 
+If this is your first time using brew, you will have to make sure it
+is in your path. Add this to the end of your `.zshrc` file (in your
+home directory). Or maybe it's in your `.zprofile`. Or maybe it's in
+your `.zshenv`. Why so many possibilities? Because Apple.
+
+`export PATH=$PATH:/opt/homebrew/bin`
+
 ### `man` Pages
 
 Since the early days, Unix has had the `man` command. For example:
