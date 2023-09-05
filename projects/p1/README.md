@@ -200,6 +200,10 @@ Here is a video specifically on setting up pipes:
 
 * [9/11/2020](<https://youtu.be/B-vCE_o_5WY>)
 
+Here is a video specifically about file descriptors:
+
+* [FD](https://youtu.be/4DggLHAOhn8)
+
 ## Required command line options
 
 Command line options can occur in any order. You must implement the
