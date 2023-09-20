@@ -189,6 +189,7 @@ On WSL:
 sudo -i
 apt update
 apt install crossbuild-essential-riscv64
+apt install qemu-system
 exit
 # decide where you want to load the original xv6
 # and change directory to there.
